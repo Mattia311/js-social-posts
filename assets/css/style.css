@@ -1,0 +1,67 @@
+body {
+    background-color: #102F45;
+
+}
+h1 {
+    color: white;
+    font-size: 52px;
+    display: flex;
+    justify-content: center;
+}
+.post {
+    background: white;
+    height: 600px;
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+.container {
+    width: 45%;
+    margin: auto;
+    display: flex;
+}
+.img-profilo {
+    border-radius: 50px;
+    margin-top: 1.3rem;
+}
+.img-main {
+    width: 100%;
+    height: 300px;
+    background-size: cover;
+}
+.header_post {
+    width: 95%;
+    margin: auto;
+    display: flex;
+}
+.main_post {
+    width: 95%;
+    margin: auto;
+}
+.footer_post {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 53px;
+}
+h4 {
+    
+    margin-bottom: 0px;
+    margin-top: 34px;
+    margin-left: 25px;
+
+}
+.text_header {
+    margin-top: 0px;
+    margin-left: 25px;
+    font-size: 13px;
+}
+button {
+    background: white;
+    border: none;
+    cursor: pointer;
+    font-size: 22px;
+}
+.text_footer {
+    margin-top: 0px;
+    font-size: 22px;
+}
