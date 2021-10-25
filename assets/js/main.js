@@ -13,20 +13,6 @@ const post = [
         }
         
     },
-    /*{
-        id: 2,
-        data_creazione: '2 mesi fa',
-        testo: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam est asperiores voluptate excepturi reprehenderit molestias perspiciatis tempora suscipit temporibus provident minus, enim, quaerat animi? Qui hic incidunt obcaecati neque praesentium!',
-        img: "https://images.unsplash.com/photo-1634913940926-dc70e78b394b?ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw0Mnx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
-        miPiace: '<i class="fas fa-thumbs-down"></i>&nbsp;Non mi Piace',
-        like: 80,
-        autore: {
-            userName: 'Sofia Perlari',
-            img_profil: "https://images.unsplash.com/photo-1635149122830-5aabbea9eacd?ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw1fHx8ZW58MHx8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
-
-        }
-    
-    },*/
     {
         id: 3,
         data_creazione: '1 mese fa',
@@ -41,20 +27,6 @@ const post = [
         }
 
     },
-    /*{
-        id: 4,
-        data_creazione: '5 mesi fa',
-        testo: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam est asperiores voluptate excepturi reprehenderit molestias perspiciatis tempora suscipit temporibus provident minus, enim, quaerat animi? Qui hic incidunt obcaecati neque praesentium!',
-        img: "https://images.unsplash.com/photo-1634992718112-a2edce608ddc?ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw0OXx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
-        miPiace: '<i class="fas fa-thumbs-down"></i>&nbsp;Non mi Piace',
-        like: 80,
-        autore: {
-            userName: 'Luca Attanasio',
-            img_profil: 'https://images.unsplash.com/photo-1635051796669-da5656d091bc?ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw0Nnx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60',
-
-        }
-
-    },*/
     {
         id: 5,
         data_creazione: '8 mesi fa',
@@ -76,7 +48,7 @@ const postLike = [
         data_creazione: '2 mesi fa',
         testo: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam est asperiores voluptate excepturi reprehenderit molestias perspiciatis tempora suscipit temporibus provident minus, enim, quaerat animi? Qui hic incidunt obcaecati neque praesentium!',
         img: "https://images.unsplash.com/photo-1634913940926-dc70e78b394b?ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw0Mnx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
-        miPiace: '<i class="fas fa-thumbs-down"></i>&nbsp;Non mi Piace',
+        miPiace: '<i class="fas fa-thumbs-down"></i>&nbsp;Non mi Piace più',
         like: 80,
         autore: {
             userName: 'Sofia Perlari',
@@ -90,7 +62,7 @@ const postLike = [
         data_creazione: '5 mesi fa',
         testo: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam est asperiores voluptate excepturi reprehenderit molestias perspiciatis tempora suscipit temporibus provident minus, enim, quaerat animi? Qui hic incidunt obcaecati neque praesentium!',
         img: "https://images.unsplash.com/photo-1634992718112-a2edce608ddc?ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw0OXx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
-        miPiace: '<i class="fas fa-thumbs-down"></i>&nbsp;Non mi Piace',
+        miPiace: '<i class="fas fa-thumbs-down"></i>&nbsp;Non mi Piace più',
         like: 80,
         autore: {
             userName: 'Luca Attanasio',
@@ -135,27 +107,20 @@ function renderTeamMember(member, member1) {
         </div>`
 
   }
+  
 
 
 
 
 
 
-
-function renderTeamElements(post) {
-    // Ciclare nell'array di oggetti
-    for (let index = 0; index < post.length; index++) {
+function renderTeamElements(post,postLike) {
+    
+    for (let index = 0; index < post.length && postLike.length; index++) {
       const member = post[index];
+      const member1 = postLike[index]
   
       document.querySelector('.row').insertAdjacentHTML('beforeend', renderTeamMember(member))
-  
-    }
-  }
-  function renderTeamElements(post) {
-    // Ciclare nell'array di oggetti
-    for (let index = 0; index < postLike.length; index++) {
-      const member1= postLike[index];
-  
       document.querySelector('.row').insertAdjacentHTML('beforeend', renderTeamMember(member1))
   
     }
